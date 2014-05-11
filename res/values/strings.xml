@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Light Message</string>
+    <string name="send">Send</string>
+    <string name="by_screen">By screen</string>
+    <string name="by_led">By LED</string>
+    <string name="receive">Receive</string>
+    <string name="by_sensor">By sensor</string>
+    <string name="by_camera">By camera</string>
+    <string name="how_to_use">How to use \?</string>
+    <string name="edit_hint">Message to send&#8230;</string>
+    <string name="send_success">Message sent successfully</string>
+    
+    <!-- Error message -->
+    <string name="empty_message_error">Message must not be empty</string>
+    <string name="not_compatible_title">Oops</string>
+    <string name="not_compatible_content">Incompatible with this device for receiving. While you can use it for sending messages.</string>
+    <string name="receive_fail_title">Failure</string>
+    <string name="receive_fail_content">Receive failed</string>
+    <string name="not_yet_implemented">Not yet implemented, please stay tuned.</string>
+    
+    <!-- Introduction -->
+    <string name="step_one_title">Step 1 :</string>
+    <string name="step_one_content">Install LIGHT MESSAGE on two Android smartphones and execute the application. One as sender and another as receiver.</string>
+    <string name="step_two_title">Step 2 :</string>
+    <string name="step_two_content">On sender, type the messages you want to send, and click SEND button. Then cover the receiver\'s light sensor by the sender\'s screen rapidly(or keep a distance within 10 cm, if you use LED to send, you can try it with larger distance).</string>
+    <string name="step_three_title">Step 3 :</string>
+    <string name="step_three_content">On receiver, click RECEIVE button, and just wait for the result. Hope you enjoy it!</string>
+	<string name="i_know">OK</string>
+	<string name="ps">P.S.</string>
+	<string name="more_information">The light sensor is on the top of front face, above the screen.\n\nStep two and step three must be done in 5 seconds.\n\nAttention! This application may not works for some smartphones caused by the variance of the light sensors. But i will continue to improve it. Please looking forward.</string>
+    
+</resources>

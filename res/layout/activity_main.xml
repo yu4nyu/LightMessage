@@ -1,0 +1,228 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/main_activity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Prevent the EditText from gaining focus at activity startup -->
+        <LinearLayout
+            android:id="@+id/empty_linear_layout"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/darker_gray"
+            android:hint="@string/edit_hint"
+            android:maxLines="5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/main_activity_send_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:drawableLeft="@drawable/light_send"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:onClick="send"
+                android:padding="16dp"
+                android:text="@string/send"
+                android:textColor="@android:color/darker_gray"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
+
+            <ToggleButton
+                android:id="@+id/main_activity_send_by_screen"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="-5dp"
+                android:layout_marginLeft="-2dp"
+                android:layout_weight="2"
+                android:checked="true"
+                android:textColor="@android:color/darker_gray"
+                android:textOff="@string/by_screen"
+                android:textOn="@string/by_screen" />
+
+            <ToggleButton
+                android:id="@+id/main_activity_send_by_led"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="-2dp"
+                android:layout_weight="2"
+                android:textColor="@android:color/darker_gray"
+                android:textOff="@string/by_led"
+                android:textOn="@string/by_led" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:layout_marginBottom="-5dp" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/main_activity_lightning_image"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="4"
+                android:scaleType="fitCenter"
+                android:visibility="invisible"
+                android:contentDescription="@string/app_name" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
+
+            <ToggleButton
+                android:id="@+id/main_activity_receive_by_sensor"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="-5dp"
+                android:layout_marginLeft="-2dp"
+                android:layout_weight="2"
+                android:checked="true"
+                android:textColor="@android:color/darker_gray"
+                android:textOff="@string/by_sensor"
+                android:textOn="@string/by_sensor" />
+
+            <ToggleButton
+                android:id="@+id/main_activity_receive_by_camera"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="-2dp"
+                android:layout_weight="2"
+                android:textColor="@android:color/darker_gray"
+                android:textOff="@string/by_camera"
+                android:textOn="@string/by_camera" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/main_activity_receive_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:drawableLeft="@drawable/light_receive"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:onClick="receive"
+                android:padding="16dp"
+                android:text="@string/receive"
+                android:textColor="@android:color/darker_gray"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:drawableLeft="@drawable/light"
+                android:onClick="introduction"
+                android:padding="16dp"
+                android:text="@string/how_to_use"
+                android:textColor="@android:color/darker_gray"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
